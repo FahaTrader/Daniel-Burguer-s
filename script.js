@@ -56,7 +56,7 @@ function addToCart(name, price){
 function updateCartModal(){
     cartItemsContainer.innerHTML = "";
     let total = 0;
-    const delivery = 4;
+    let delivery = 4;
 
     cart.forEach(item => {
         const cartItemElement = document.createElement("div");
@@ -76,7 +76,7 @@ function updateCartModal(){
             </div>
         `
 
-        total += delivery + (item.price * item.quantity);
+        total += (delivery) + item.price * item.quantity;
 
         cartItemsContainer.appendChild(cartItemElement)
     })
