@@ -56,6 +56,7 @@ function addToCart(name, price){
 function updateCartModal(){
     cartItemsContainer.innerHTML = "";
     let total = 0;
+    let delivery = 4;
 
     cart.forEach(item => {
         const cartItemElement = document.createElement("div");
@@ -75,7 +76,7 @@ function updateCartModal(){
             </div>
         `
 
-        total += item.price * item.quantity;
+        total += delivery + item.price * item.quantity;
 
         cartItemsContainer.appendChild(cartItemElement)
     })
@@ -151,7 +152,7 @@ checkoutBtn.addEventListener("click", function(){
 
     const carItems = cart.map((item) => {
         return (
-           ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
+           ` ${item.name} (${item.quantity}) Preço: R$${item.price} Total:R$${total} |`
         )
     }).join("")
 
