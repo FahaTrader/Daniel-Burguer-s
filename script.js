@@ -76,7 +76,7 @@ function updateCartModal(){
             </div>
         `
 
-        total += delivery + item.price * item.quantity;
+        total += delivery + (item.price * item.quantity);
 
         cartItemsContainer.appendChild(cartItemElement)
     })
