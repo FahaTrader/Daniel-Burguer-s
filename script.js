@@ -57,7 +57,7 @@ function updateCartModal(){
     
     let total = 0;
     let delivery = 4;
-    let MEU_CARRINHO = [];
+    let MEU_CARRINHO = 0;
 
     cart.forEach(item => {
         const cartItemElement = document.createElement("div");
