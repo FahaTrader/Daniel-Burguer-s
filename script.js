@@ -10,6 +10,7 @@ const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
 
 let cart= [];
+let MEU_CARRINHO = 0;
 
 
 cartBtn.addEventListener("click", function() {
@@ -78,7 +79,7 @@ function updateCartModal(){
         `
 
         total += item.price * item.quantity;
-        total += total + delivery;
+        MEU_CARRINHO = total + delivery;
 
         cartItemsContainer.appendChild(cartItemElement)
     })
