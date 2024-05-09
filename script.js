@@ -78,7 +78,7 @@ function updateCartModal(){
         `
 
         total += (item.price * item.quantity);
-        MEU_CARRINHO = total + delivery;
+        MEU_CARRINHO += total + delivery;
 
         cartItemsContainer.appendChild(cartItemElement)
     })
@@ -159,7 +159,7 @@ checkoutBtn.addEventListener("click", function(){
     }).join("")
 
     const message = encodeURIComponent(carItems)
-    const phone = "988526928"
+    const phone = "5521988526928"
 
     window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
 
